@@ -1,0 +1,88 @@
+<div class="entry-content">
+		<p>Kita boleh menggunakan <em>Cascading Style Sheets</em> (CSS) untuk menghias program kita. CSS selalunya digunakan untuk menghias website. Selalu kita nampak setiap website mempunyai <em>button</em>, <em>menu</em>, dan <em>background</em> yang lain daripada website lain. Sebenarnya CSS yang menghias website tersebut.</p>
+<p>Format CSS adalah seperti berikut:</p>
+<p><em>&lt;selector&gt; { &lt;property&gt;: &lt;value&gt;; &lt;property&gt;: value }</em></p>
+<p>Contohnya,</p>
+<p><em>.button { background-color: black; font-size: 20; font-family: “Arial” }</em></p>
+<p>Untuk JavaFX ada sedikit tambahan pada nama <em>property</em>, iaitu ‘-fx-‘, contohnya,</p>
+<p><em>.button { -fx-background-color: black }</em></p>
+<p>Sekarang kita akan menghias program kita sebelum ini, iaitu program HelloJavaFX.</p>
+<hr>
+<h3>Create file CSS</h3>
+<p>Sebelum itu, seperti biasa kita akan membuat <em>package</em> baru untuk menyimpan semua file CSS dan gambar-gambar (jika ada).</p>
+<p>Klik kanan pada <em>package</em> ‘hellojavafx’, kemudian ‘New’, dan klik ‘Java Package’. Kita namakan <em>package</em> ini sebagai ‘hellojavafx.style’. Klik ‘Finish’.</p>
+<p>Untuk <em>create</em> file CSS, klik kanan pada <em>package</em> ‘style’, kemudian ‘New’, dan klik ‘Empty File’. Namakan apa-apa sahaja jadi kita namakan file tersebut sebagai ‘home.css’. Klik ‘Finish’.</p>
+<hr>
+<h3>Background</h3>
+<p>Kita boleh menggunakan gambar sebagai <em>background</em>. Di sini saya menggunakan gambar dari <a target="_blank" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.freedigitalphotos.net/images/Backgrounds_g162.html', 'FreeDigitalPhotos.net');" href="http://www.freedigitalphotos.net/images/Backgrounds_g162.html">FreeDigitalPhotos.net</a>. Terpulang kepada anda untuk menggunakan gambar apa.</p>
+<p><a target="_blank" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.freedigitalphotos.net/images/blue-curved-abstract-background-photo-p285859', 'Klik untuk lihat gambar yang saya gunakan');" href="http://www.freedigitalphotos.net/images/blue-curved-abstract-background-photo-p285859">Klik untuk lihat gambar yang saya gunakan</a></p>
+<p>Hati-hati jika anda mengambil mana-mana gambar dari internet kerana gambar tersebut merupakan hak milik orang lain. Jika ada gambar-gambar yang boleh digunakan tanpa royalti seperti gambar yang saya gunakan itu, pastikan betul-betul yang gambar itu boleh digunakan. Gambar yang saya gunakan itu boleh digunakan secara <em>free</em> dengan syarat dinyatakan sumber gambar tersebut diambil.</p>
+<p>Cara alternatif adalah dengan membuat gambar sendiri menggunakan <em>software</em> seperti <a target="_blank" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.gimp.org/', 'GIMP');" href="http://www.gimp.org/">GIMP</a> atau Photoshop.</p>
+<p>Setelah dapat gambar untuk digunakan, letakkan gambar tersebut di dalam folder yang sama dengan file CSS. Kita boleh namakan file tersebut sebagai ‘background.jpg’.</p>
+<hr>
+<h3>Button</h3>
+<p>Saya tidak berapa mahir sangat dalam <em>designing</em>, jadi saya search mana-mana <em>CSS generator</em> secara online. Untuk <em>button</em>, saya menggunakan <a target="_blank" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://css3buttongenerator.com/', 'CSS Button Generator');" href="http://css3buttongenerator.com/">CSS Button Generator</a>, jumpa di Google dengan keyword <a target="_blank" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=css%20button', '‘css button’');" href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=css%20button">‘css button’</a>.</p>
+<p>Kelebihan menggunakan CSS ialah kita dapat menukar sesuatu <em>style</em> mengikut apa yang user lakukan. Contohnya, kita mahu <em>button</em> bertukar warna sebaik sahaja user klik pada <em>button</em> tersebut. Berikut ialah <em>selector</em> yang boleh digunakan pada <em>button</em> untuk tujuan ini:</p>
+<ul><li><em>‘:hover’</em> – tukar style jika user meletakkan <em>mouse</em> di atas <em>button</em></li><li><em>‘:pressed’</em> – tukar style jika user klik pada <em>button</em></li></ul>
+<hr>
+<h3>File ‘home.css’</h3>
+<p>Setelah mengambil kira semua perkara di atas, akhirnya file ‘home.css’ kita akan jadi seperti ini:</p>&#13;
+&#13;
+		<div style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;" data-settings=" minimize scroll-mouseover" class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" id="crayon-5905468ba9c11562988994">&#13;
+		&#13;
+			<div class="crayon-plain-wrap"><textarea style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;" readonly data-settings="" class="crayon-plain print-no" wrap="soft">
+.root {&#13;
+    -fx-background-image: url(&quot;background.jpg&quot;);&#13;
+}&#13;
+&#13;
+.button {&#13;
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);&#13;
+    -fx-background-radius: 28;&#13;
+    -fx-text-fill: white;&#13;
+    -fx-font-family: sans-serif;&#13;
+    -fx-opacity: 0.6;&#13;
+}&#13;
+&#13;
+.button:hover {&#13;
+    -fx-opacity: 1.0;&#13;
+}&#13;
+&#13;
+.button:pressed {&#13;
+    -fx-background-color: linear-gradient(to bottom, #3cb0fd, #3498db);&#13;
+}&#13;
+&#13;
+.label {&#13;
+    -fx-font-family: sans-serif;&#13;
+    -fx-font-weight: bold;&#13;
+    -fx-text-fill: green;&#13;
+}</textarea></div>&#13;
+			<div style="" class="crayon-main">&#13;
+				<table class="crayon-table"><tbody><tr class="crayon-row"><td data-settings="show" class="crayon-nums ">&#13;
+					<div style="font-size: 12px !important; line-height: 15px !important;" class="crayon-nums-content"><div data-line="crayon-5905468ba9c11562988994-1" class="crayon-num">1</div><div data-line="crayon-5905468ba9c11562988994-2" class="crayon-num crayon-striped-num">2</div><div data-line="crayon-5905468ba9c11562988994-3" class="crayon-num">3</div><div data-line="crayon-5905468ba9c11562988994-4" class="crayon-num crayon-striped-num">4</div><div data-line="crayon-5905468ba9c11562988994-5" class="crayon-num">5</div><div data-line="crayon-5905468ba9c11562988994-6" class="crayon-num crayon-striped-num">6</div><div data-line="crayon-5905468ba9c11562988994-7" class="crayon-num">7</div><div data-line="crayon-5905468ba9c11562988994-8" class="crayon-num crayon-striped-num">8</div><div data-line="crayon-5905468ba9c11562988994-9" class="crayon-num">9</div><div data-line="crayon-5905468ba9c11562988994-10" class="crayon-num crayon-striped-num">10</div><div data-line="crayon-5905468ba9c11562988994-11" class="crayon-num">11</div><div data-line="crayon-5905468ba9c11562988994-12" class="crayon-num crayon-striped-num">12</div><div data-line="crayon-5905468ba9c11562988994-13" class="crayon-num">13</div><div data-line="crayon-5905468ba9c11562988994-14" class="crayon-num crayon-striped-num">14</div><div data-line="crayon-5905468ba9c11562988994-15" class="crayon-num">15</div><div data-line="crayon-5905468ba9c11562988994-16" class="crayon-num crayon-striped-num">16</div><div data-line="crayon-5905468ba9c11562988994-17" class="crayon-num">17</div><div data-line="crayon-5905468ba9c11562988994-18" class="crayon-num crayon-striped-num">18</div><div data-line="crayon-5905468ba9c11562988994-19" class="crayon-num">19</div><div data-line="crayon-5905468ba9c11562988994-20" class="crayon-num crayon-striped-num">20</div><div data-line="crayon-5905468ba9c11562988994-21" class="crayon-num">21</div><div data-line="crayon-5905468ba9c11562988994-22" class="crayon-num crayon-striped-num">22</div><div data-line="crayon-5905468ba9c11562988994-23" class="crayon-num">23</div><div data-line="crayon-5905468ba9c11562988994-24" class="crayon-num crayon-striped-num">24</div><div data-line="crayon-5905468ba9c11562988994-25" class="crayon-num">25</div></div>&#13;
+				</td><td class="crayon-code"><div style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;" class="crayon-pre"><div id="crayon-5905468ba9c11562988994-1" class="crayon-line"><span class="crayon-k ">.root </span><span class="crayon-sy">{</span></div><div id="crayon-5905468ba9c11562988994-2" class="crayon-line crayon-striped-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-background-image</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">url</span><span class="crayon-sy">(</span><span class="crayon-s">&quot;background.jpg&quot;</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-3" class="crayon-line"><span class="crayon-sy">}</span></div><div id="crayon-5905468ba9c11562988994-4" class="crayon-line crayon-striped-line"> </div><div id="crayon-5905468ba9c11562988994-5" class="crayon-line"><span class="crayon-k ">.button </span><span class="crayon-sy">{</span></div><div id="crayon-5905468ba9c11562988994-6" class="crayon-line crayon-striped-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-background-color</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">linear-gradient</span><span class="crayon-sy">(</span><span class="crayon-i ">to</span><span class="crayon-h"> </span><span class="crayon-i ">bottom,</span><span class="crayon-h"> </span><span class="crayon-i ">#3498db,</span><span class="crayon-h"> </span><span class="crayon-i ">#2980b9</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-7" class="crayon-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-background-radius</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">28</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-8" class="crayon-line crayon-striped-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-text-fill</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">white</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-9" class="crayon-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-font-family</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">sans-serif</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-10" class="crayon-line crayon-striped-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-opacity</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">0.6</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-11" class="crayon-line"><span class="crayon-sy">}</span></div><div id="crayon-5905468ba9c11562988994-12" class="crayon-line crayon-striped-line"> </div><div id="crayon-5905468ba9c11562988994-13" class="crayon-line"><span class="crayon-k ">.button:hover </span><span class="crayon-sy">{</span></div><div id="crayon-5905468ba9c11562988994-14" class="crayon-line crayon-striped-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-opacity</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">1.0</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-15" class="crayon-line"><span class="crayon-sy">}</span></div><div id="crayon-5905468ba9c11562988994-16" class="crayon-line crayon-striped-line"> </div><div id="crayon-5905468ba9c11562988994-17" class="crayon-line"><span class="crayon-k ">.button:pressed </span><span class="crayon-sy">{</span></div><div id="crayon-5905468ba9c11562988994-18" class="crayon-line crayon-striped-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-background-color</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">linear-gradient</span><span class="crayon-sy">(</span><span class="crayon-i ">to</span><span class="crayon-h"> </span><span class="crayon-i ">bottom,</span><span class="crayon-h"> </span><span class="crayon-i ">#3cb0fd,</span><span class="crayon-h"> </span><span class="crayon-i ">#3498db</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-19" class="crayon-line"><span class="crayon-sy">}</span></div><div id="crayon-5905468ba9c11562988994-20" class="crayon-line crayon-striped-line"> </div><div id="crayon-5905468ba9c11562988994-21" class="crayon-line"><span class="crayon-k ">.label </span><span class="crayon-sy">{</span></div><div id="crayon-5905468ba9c11562988994-22" class="crayon-line crayon-striped-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-font-family</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">sans-serif</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-23" class="crayon-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-font-weight</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">bold</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-24" class="crayon-line crayon-striped-line"><span class="crayon-h">    </span><span class="crayon-e ">-fx-text-fill</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">green</span><span class="crayon-sy">;</span></div><div id="crayon-5905468ba9c11562988994-25" class="crayon-line"><span class="crayon-sy">}</span></div></div></td></tr></tbody></table>&#13;
+			</div>&#13;
+		</div>&#13;
+&#13;
+<p></p>
+<hr>
+<h3>Scene Builder</h3>
+<p>Selepas siap file CSS, kita perlu memberitahu file FXML untuk menggunakan file CSS tersebut. Salah satu cara adalah dengan menggunakan Scene Builder.</p>
+<p><em>Double-click</em> ‘Home.fxml’ untuk membuka Scene Builder. Klik pada Pane yang di bawah sekali iaitu AnchorPane dan tetapkan file CSS di menu sebelah kanan bahagian Properties.</p>
+<p><img height="296" width="306" alt="Gambar menetapkan file CSS pada FXML menggunakan Scene Builder" src="https://lh3.googleusercontent.com/-IS_EzOyBfaA/VaCVOndwaKI/AAAAAAAAAI4/I6QsCbhFyEc/s306-Ic42/sambung%252520CSS%252520dengan%252520FXML.png" class="aligncenter"></p>
+<p>Sekarang kita boleh nampak <em>preview</em> kepada program kita sudah bertukar. <em>Save</em> dan tutup Scene Builder.</p>
+<p>Kita boleh <em>run</em> program kita untuk melihat hasilnya.</p>
+<p><img height="329" width="411" alt="Gambar demo HelloJavaFX dengan CSS" src="https://lh3.googleusercontent.com/-1jOBn8LbArU/VaCfT1MSaJI/AAAAAAAAAJQ/aukOTcdJ7OU/s411-Ic42/screencapture_x264.gif" class="aligncenter"></p>
+<hr>
+<h3>CSS Analyzer</h3>
+<p>Semasa kita menulis CSS, ada masa kita tidak tahu apa <em>property</em> yang boleh ditukar untuk sesuatu <em>control</em>. Jangan khuatir kerana kita boleh menggunakan CSS Analyzer di Scene Builder.</p>
+<p>Untuk membuka CSS Analyzer, klik ‘View’ di menu atas dan klik ‘Show CSS Analyzer’.</p>
+<p><img height="320" width="345" alt="Gambar Show CSS Analyzer" src="https://lh3.googleusercontent.com/-8y4czbe3rZ4/VaCiBfGcWwI/AAAAAAAAAJk/qWgIz3t6djY/s345-Ic42/show%252520css%252520analyzer.png" class="aligncenter"></p>
+<p>Setelah selesai, CSS Analyzer akan terpapar di bawah.</p>
+<p>Nama <em>selector</em> untuk sesebuah <em>control</em> juga boleh dilihat di ‘Styleable Path’:</p>
+<p><img height="156" width="325" alt="Gambar menunjukkan nama selector untuk control" src="https://lh3.googleusercontent.com/-UiJ5z8eFuYY/VaCjRw8d8wI/AAAAAAAAAJ4/V0Z1VkXQuCo/s325-Ic42/selector%252520untuk%252520control.png" class="aligncenter"></p>
+<hr>
+<h3>Edit secara <em>live</em></h3>
+<p>Scene Builder juga boleh digunakan untuk melihat secara <em>live</em> sesuatu style yang kita tukar. Fungsi ini terletak di menu sebelah kanan bahagian Properties:</p>
+<p><img height="318" width="307" alt="Gambar edit CSS secara live" src="https://lh3.googleusercontent.com/-cCHMjhXKgPc/VaCk3ClV_wI/AAAAAAAAAKM/b9jFI-CO7II/s318-Ic42/edit%252520secara%252520live.png" class="aligncenter"></p>
+<p>Cuma kekurangannya CSS yang kita tulis di Scene Builder tidak disimpan di file CSS, sebaliknya disimpan di dalam file FXML. Kita asingkan file CSS dengan file FXML supaya projek lebih tersusun, dan juga supaya <em>designer</em> mudah mencari file tersebut.</p>
+<div class="ssba ssba-wrap"><div style="text-align:left">Share!<br><a target="_blank" class="ssba_facebook_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/styling-dengan-css/', '');" href="http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/styling-dengan-css/"><img alt="Share on Facebook" class="ssba ssba-img" title="Facebook" src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/facebook.png"></a><a target="_blank" class="ssba_twitter_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://twitter.com/share?url=http://www.jombelajarjava.com/styling-dengan-css/&amp;text=Styling+Dengan+CSS+', '');" href="http://twitter.com/share?url=http://www.jombelajarj
