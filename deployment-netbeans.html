@@ -1,69 +1,93 @@
-<div class="entry-content">
+<article id="post-406" class="post-406 post type-post status-publish format-standard hentry category-javafx tag-deployment tag-exe tag-jar tag-netbeans">
+	<header class="entry-header page-header">
+
+		
+		<h1 class="entry-title ">Deployment (Netbeans)</h1>
+
+		<div class="entry-meta">
+			<span class="posted-on"><i class="fa fa-calendar"/> <a href="http://www.jombelajarjava.com/deployment-netbeans/" rel="bookmark"><time class="entry-date published" datetime="2015-07-20T13:13:23+00:00">July 20, 2015</time><time class="updated" datetime="2015-07-20T13:18:12+00:00">July 20, 2015</time></a></span><span class="byline"> <i class="fa fa-user"/> <span class="author vcard"><a class="url fn n" href="http://www.jombelajarjava.com/author/xiado/">An</a></span></span>		</div><NIL/>
+	</header><NIL/>
+
+	<div class="entry-content">
 		<p>Sebelum ini kita membuat <em>deployment</em> dengan menggunakan <em>Ant build system</em>. Ada sesetengah <em>steps</em> yang mungkin terlebih rumit untuk sesetengah orang. Jika anda menggunakan Netbeans, ada beberapa <em>shortcut</em> yang kita boleh gunakan.</p>
-<hr>
+<hr/>
 <h3>Icon</h3>
 <p>Cara yang sama digunakan seperti sebelum ini.</p>
-<hr>
+<hr/>
 <h3>Executable JAR</h3>
 <p>Cara yang sama digunakan seperti sebelum ini.</p>
-<hr>
+<hr/>
 <h3>Executable EXE</h3>
 <p>Untuk membuat file EXE menggunakan Netbeans, klik kanan pada <em>project</em>, kemudian ‘Properties’. Pergi ke ‘Deployment’, dan <em>tick</em> ‘Enable Native Packaging’. Klik OK.</p>
 <p>Setelah selesai, sekali lagi klik kanan pada <em>project</em>, dan kita boleh nampak menu baru iaitu ‘Package as’. Untuk membuat file EXE, pergi ke ‘Package as’, dan klik ‘Image Only’.</p>
-<p><img height="370" width="433" alt="Gambar membuat file EXE menggunakan Netbeans" src="https://lh3.googleusercontent.com/-De8L3bJPdNU/Vax-Xo_qkyI/AAAAAAAAAQI/PFFbsDlvpaU/s433-Ic42/package%252520as.png" class="aligncenter"></p>
+<p><img class="aligncenter" src="https://lh3.googleusercontent.com/-De8L3bJPdNU/Vax-Xo_qkyI/AAAAAAAAAQI/PFFbsDlvpaU/s433-Ic42/package%252520as.png" alt="Gambar membuat file EXE menggunakan Netbeans" width="433" height="370"/></p>
 <p>File EXE tersebut akan berada di folder ‘dist/bundle’.</p>
-<hr>
+<hr/>
 <h3>Tukar icon file EXE</h3>
 <p>Tukar format icon kepada ‘.ico’ seperti sebelum ini. Kemudian klik kanan pada <em>project</em>, dan klik ‘Properties’. Pergi ke ‘Deployment’.</p>
 <p>Di sini kita boleh nampak ‘Icons and Splash Image:’. Klik ‘Edit…’, dan pilih gambar ‘.ico’ untuk ‘Native Package Icon’.</p>
-<p><img height="221" width="649" alt="Gambar menambah icon pada file EXE menggunakan Netbeans" src="https://lh3.googleusercontent.com/-MTomJA4VvDU/VayAcBGiE5I/AAAAAAAAAQc/yPpQtN-GmGE/s649-Ic42/icon%252520pada%252520exe.png" class="aligncenter"></p>
+<p><img class="aligncenter" src="https://lh3.googleusercontent.com/-MTomJA4VvDU/VayAcBGiE5I/AAAAAAAAAQc/yPpQtN-GmGE/s649-Ic42/icon%252520pada%252520exe.png" alt="Gambar menambah icon pada file EXE menggunakan Netbeans" width="649" height="221"/></p>
 <p>Setelah selesai, hasilkan kembali file EXE seperti sebelum ini untuk lihat icon baru pada file EXE tersebut.</p>
-<hr>
+<hr/>
 <h3>Executable EXE tanpa JRE</h3>
 <p>Sebab-sebab kenapa kita buat step ini telah diberitahu di post sebelum ini.</p>
-<p>Untuk membuang JRE daripada <em>deployment</em>, buka file config yang berada di folder ‘app’ menggunakan Notepad/Notepad++. File tersebut akan kelihatan seperti ini:</p>&#13;
-&#13;
-		<div style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;" data-settings=" minimize scroll-mouseover" class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" id="crayon-59088a7e64590793796260">&#13;
-		&#13;
-			<div class="crayon-plain-wrap"><textarea style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;" readonly data-settings="" class="crayon-plain print-no" wrap="soft">
-app.runtime=$APPDIR\runtime&#13;
-app.mainjar=HelloJavaFX.jar&#13;
-app.version=1.0&#13;
-app.id=hellojavafx&#13;
-app.preferences.id=hellojavafx&#13;
-app.mainclass=hellojavafx/HelloJavaFX&#13;
-app.classpath=</textarea></div>&#13;
-			<div style="" class="crayon-main">&#13;
-				<table class="crayon-table"><tbody><tr class="crayon-row"><td data-settings="show" class="crayon-nums ">&#13;
-					<div style="font-size: 12px !important; line-height: 15px !important;" class="crayon-nums-content"><div data-line="crayon-59088a7e64590793796260-1" class="crayon-num">1</div><div data-line="crayon-59088a7e64590793796260-2" class="crayon-num crayon-striped-num">2</div><div data-line="crayon-59088a7e64590793796260-3" class="crayon-num">3</div><div data-line="crayon-59088a7e64590793796260-4" class="crayon-num crayon-striped-num">4</div><div data-line="crayon-59088a7e64590793796260-5" class="crayon-num">5</div><div data-line="crayon-59088a7e64590793796260-6" class="crayon-num crayon-striped-num">6</div><div data-line="crayon-59088a7e64590793796260-7" class="crayon-num">7</div></div>&#13;
-				</td><td class="crayon-code"><div style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;" class="crayon-pre"><div id="crayon-59088a7e64590793796260-1" class="crayon-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">runtime</span><span class="crayon-o">=</span><span class="crayon-sy">$</span><span class="crayon-v">APPDIR</span><span class="crayon-sy">\</span><span class="crayon-e">runtime</span></div><div id="crayon-59088a7e64590793796260-2" class="crayon-line crayon-striped-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">mainjar</span><span class="crayon-o">=</span><span class="crayon-v">HelloJavaFX</span><span class="crayon-sy">.</span><span class="crayon-e">jar</span></div><div id="crayon-59088a7e64590793796260-3" class="crayon-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">version</span><span class="crayon-o">=</span><span class="crayon-cn">1.0</span></div><div id="crayon-59088a7e64590793796260-4" class="crayon-line crayon-striped-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">id</span><span class="crayon-o">=</span><span class="crayon-e">hellojavafx</span></div><div id="crayon-59088a7e64590793796260-5" class="crayon-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">preferences</span><span class="crayon-sy">.</span><span class="crayon-v">id</span><span class="crayon-o">=</span><span class="crayon-e">hellojavafx</span></div><div id="crayon-59088a7e64590793796260-6" class="crayon-line crayon-striped-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">mainclass</span><span class="crayon-o">=</span><span class="crayon-v">hellojavafx</span><span class="crayon-o">/</span><span class="crayon-e">HelloJavaFX</span></div><div id="crayon-59088a7e64590793796260-7" class="crayon-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">classpath</span><span class="crayon-o">=</span></div></div></td></tr></tbody></table>&#13;
-			</div>&#13;
-		</div>&#13;
-&#13;
-<p>Padam <em>path</em> ‘runtime’ tersebut seperti ini:</p>&#13;
-&#13;
-		<div style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;" data-settings=" minimize scroll-mouseover" class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" id="crayon-59088a7e64598315033666">&#13;
-		&#13;
-			<div class="crayon-plain-wrap"><textarea style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;" readonly data-settings="" class="crayon-plain print-no" wrap="soft">
-app.runtime=&#13;
-app.mainjar=HelloJavaFX.jar&#13;
-app.version=1.0&#13;
-app.id=hellojavafx&#13;
-app.preferences.id=hellojavafx&#13;
-app.mainclass=hellojavafx/HelloJavaFX&#13;
-app.classpath=</textarea></div>&#13;
-			<div style="" class="crayon-main">&#13;
-				<table class="crayon-table"><tbody><tr class="crayon-row"><td data-settings="show" class="crayon-nums ">&#13;
-					<div style="font-size: 12px !important; line-height: 15px !important;" class="crayon-nums-content"><div data-line="crayon-59088a7e64598315033666-1" class="crayon-num crayon-marked-num crayon-top crayon-bottom">1</div><div data-line="crayon-59088a7e64598315033666-2" class="crayon-num crayon-striped-num">2</div><div data-line="crayon-59088a7e64598315033666-3" class="crayon-num">3</div><div data-line="crayon-59088a7e64598315033666-4" class="crayon-num crayon-striped-num">4</div><div data-line="crayon-59088a7e64598315033666-5" class="crayon-num">5</div><div data-line="crayon-59088a7e64598315033666-6" class="crayon-num crayon-striped-num">6</div><div data-line="crayon-59088a7e64598315033666-7" class="crayon-num">7</div></div>&#13;
-				</td><td class="crayon-code"><div style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;" class="crayon-pre"><div id="crayon-59088a7e64598315033666-1" class="crayon-line crayon-marked-line crayon-top crayon-bottom"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">runtime</span><span class="crayon-o">=</span></div><div id="crayon-59088a7e64598315033666-2" class="crayon-line crayon-striped-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">mainjar</span><span class="crayon-o">=</span><span class="crayon-v">HelloJavaFX</span><span class="crayon-sy">.</span><span class="crayon-e">jar</span></div><div id="crayon-59088a7e64598315033666-3" class="crayon-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">version</span><span class="crayon-o">=</span><span class="crayon-cn">1.0</span></div><div id="crayon-59088a7e64598315033666-4" class="crayon-line crayon-striped-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">id</span><span class="crayon-o">=</span><span class="crayon-e">hellojavafx</span></div><div id="crayon-59088a7e64598315033666-5" class="crayon-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">preferences</span><span class="crayon-sy">.</span><span class="crayon-v">id</span><span class="crayon-o">=</span><span class="crayon-e">hellojavafx</span></div><div id="crayon-59088a7e64598315033666-6" class="crayon-line crayon-striped-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">mainclass</span><span class="crayon-o">=</span><span class="crayon-v">hellojavafx</span><span class="crayon-o">/</span><span class="crayon-e">HelloJavaFX</span></div><div id="crayon-59088a7e64598315033666-7" class="crayon-line"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">classpath</span><span class="crayon-o">=</span></div></div></td></tr></tbody></table>&#13;
-			</div>&#13;
-		</div>&#13;
-&#13;
+<p>Untuk membuang JRE daripada <em>deployment</em>, buka file config yang berada di folder ‘app’ menggunakan Notepad/Notepad++. File tersebut akan kelihatan seperti ini:</p><NIL/>
+
+		<div id="crayon-5932abd5597c6449384657" class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="" readonly="" style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">app.runtime=$APPDIR\runtime
+app.mainjar=HelloJavaFX.jar
+app.version=1.0
+app.id=hellojavafx
+app.preferences.id=hellojavafx
+app.mainclass=hellojavafx/HelloJavaFX
+app.classpath=</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5932abd5597c6449384657-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5932abd5597c6449384657-2">2</div><div class="crayon-num" data-line="crayon-5932abd5597c6449384657-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5932abd5597c6449384657-4">4</div><div class="crayon-num" data-line="crayon-5932abd5597c6449384657-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5932abd5597c6449384657-6">6</div><div class="crayon-num" data-line="crayon-5932abd5597c6449384657-7">7</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5932abd5597c6449384657-1"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">runtime</span><span class="crayon-o">=</span><span class="crayon-sy">$</span><span class="crayon-v">APPDIR</span><span class="crayon-sy">\</span><span class="crayon-e">runtime</span></div><div class="crayon-line crayon-striped-line" id="crayon-5932abd5597c6449384657-2"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">mainjar</span><span class="crayon-o">=</span><span class="crayon-v">HelloJavaFX</span><span class="crayon-sy">.</span><span class="crayon-e">jar</span></div><div class="crayon-line" id="crayon-5932abd5597c6449384657-3"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">version</span><span class="crayon-o">=</span><span class="crayon-cn">1.0</span></div><div class="crayon-line crayon-striped-line" id="crayon-5932abd5597c6449384657-4"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">id</span><span class="crayon-o">=</span><span class="crayon-e">hellojavafx</span></div><div class="crayon-line" id="crayon-5932abd5597c6449384657-5"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">preferences</span><span class="crayon-sy">.</span><span class="crayon-v">id</span><span class="crayon-o">=</span><span class="crayon-e">hellojavafx</span></div><div class="crayon-line crayon-striped-line" id="crayon-5932abd5597c6449384657-6"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">mainclass</span><span class="crayon-o">=</span><span class="crayon-v">hellojavafx</span><span class="crayon-o">/</span><span class="crayon-e">HelloJavaFX</span></div><div class="crayon-line" id="crayon-5932abd5597c6449384657-7"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">classpath</span><span class="crayon-o">=</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<NIL/>
+<p>Padam <em>path</em> ‘runtime’ tersebut seperti ini:</p><NIL/>
+
+		<div id="crayon-5932abd5597cf090323427" class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="" readonly="" style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">app.runtime=
+app.mainjar=HelloJavaFX.jar
+app.version=1.0
+app.id=hellojavafx
+app.preferences.id=hellojavafx
+app.mainclass=hellojavafx/HelloJavaFX
+app.classpath=</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num crayon-marked-num crayon-top crayon-bottom" data-line="crayon-5932abd5597cf090323427-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5932abd5597cf090323427-2">2</div><div class="crayon-num" data-line="crayon-5932abd5597cf090323427-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5932abd5597cf090323427-4">4</div><div class="crayon-num" data-line="crayon-5932abd5597cf090323427-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5932abd5597cf090323427-6">6</div><div class="crayon-num" data-line="crayon-5932abd5597cf090323427-7">7</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line crayon-marked-line crayon-top crayon-bottom" id="crayon-5932abd5597cf090323427-1"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">runtime</span><span class="crayon-o">=</span></div><div class="crayon-line crayon-striped-line" id="crayon-5932abd5597cf090323427-2"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">mainjar</span><span class="crayon-o">=</span><span class="crayon-v">HelloJavaFX</span><span class="crayon-sy">.</span><span class="crayon-e">jar</span></div><div class="crayon-line" id="crayon-5932abd5597cf090323427-3"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">version</span><span class="crayon-o">=</span><span class="crayon-cn">1.0</span></div><div class="crayon-line crayon-striped-line" id="crayon-5932abd5597cf090323427-4"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">id</span><span class="crayon-o">=</span><span class="crayon-e">hellojavafx</span></div><div class="crayon-line" id="crayon-5932abd5597cf090323427-5"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">preferences</span><span class="crayon-sy">.</span><span class="crayon-v">id</span><span class="crayon-o">=</span><span class="crayon-e">hellojavafx</span></div><div class="crayon-line crayon-striped-line" id="crayon-5932abd5597cf090323427-6"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">mainclass</span><span class="crayon-o">=</span><span class="crayon-v">hellojavafx</span><span class="crayon-o">/</span><span class="crayon-e">HelloJavaFX</span></div><div class="crayon-line" id="crayon-5932abd5597cf090323427-7"><span class="crayon-v">app</span><span class="crayon-sy">.</span><span class="crayon-v">classpath</span><span class="crayon-o">=</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<NIL/>
 <p>Setelah selesai, kita boleh <em>delete</em> folder ‘runtime’ daripada folder <em>deployment</em> kita.</p>
-<hr>
+<hr/>
 <h3>Installer</h3>
 <p>Cara yang sama digunakan seperti sebelum ini.</p>
 <p> </p>
 <p> </p>
 <p> </p>
-<div class="ssba ssba-wrap"><div style="text-align:left">Share!<br><a target="_blank" class="ssba_facebook_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/deployment-netbeans/', '');" href="http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/deployment-netbeans/"><img alt="Share on Facebook" class="ssba ssba-img" title="Facebook" src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/facebook.png"></a><a target="_blank" class="ssba_twitter_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://twitter.com/share?url=http://www.jombelajarjava.com/deployment-netbeans/&amp;text=Deployment+%28Netbeans%29+', '');" href="http://twitter.com/share?url=http://www.jombelajarjava.com/deployment-netbeans/&amp;text=Deployment+%28Netbeans%29+"><img alt="Tweet about this on Twitter" class="ssba ssba-img" title="Twitter" src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/twitter.png"></a><a target="_bla
+<NIL/><div class="ssba ssba-wrap"><div style="text-align:left">Share!<br/><a href="http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/deployment-netbeans/" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/deployment-netbeans/&#039;, &#039;&#039;);" data-site="" class="ssba_facebook_share" target="_blank"><img src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/facebook.png" title="Facebook" class="ssba ssba-img" alt="Share on Facebook"/></a><a href="http://twitter.com/share?url=http://www.jombelajarjava.com/deployment-netbeans/&amp;text=Deployment+%28Netbeans%29+" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;http://twitter.com/share?url=http://www.jombelajarjava.com/deployment-netbeans/&amp;text=Deployment+%28Netbeans%29+&#039;, &#039;&#039;);" data-site="" class="ssba_twitter_share" target="_blank"><img src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/twitter.png" title="Twitter" class="ssba ssba-img" alt="Tweet about this on Twitter"/></a><a href="https://plus.google.com/share?url=http://www.jombelajarjava.com/deployment-netbeans/" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;https://plus.google.com/share?url=http://www.jombelajarjava.com/deployment-netbeans/&#039;, &#039;&#039;);" data-site="" class="ssba_google_share" target="_blank"><img src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/google.png" title="Google+" class="ssba ssba-img" alt="Share on Google+"/></a></div></div><NIL/><h3>Comments</h3><p><fb:comments-count href="http://www.jombelajarjava.com/deployment-netbeans/"/> comments</p><div class="fb-comments" data-href="http://www.jombelajarjava.com/deployment-netbeans/" data-num-posts="5" data-width="100%" data-colorscheme="light"/>			</div><NIL/>
+
+	<footer class="entry-meta">
+		<i class="fa fa-folder-open-o"/> <a href="http://www.jombelajarjava.com/category/javafx/" rel="category tag">JavaFX</a> <i class="fa fa-tags"/> <a href="http://www.jombelajarjava.com/tag/deployment/" rel="tag">deployment</a>, <a href="http://www.jombelajarjava.com/tag/exe/" rel="tag">exe</a>, <a href="http://www.jombelajarjava.com/tag/jar/" rel="tag">jar</a>, <a href="http://www.jombelajarjava.com/tag/netbeans/" rel="tag">netbeans</a>. <i class="fa fa-link"/> <a href="http://www.jombelajarjava.com/deployment-netbeans/" rel="bookmark">permalink</a>.
+						<hr class="section-divider"/>
+	</footer><NIL/>
+</article>

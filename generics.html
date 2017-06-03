@@ -1,16 +1,38 @@
-<div class="entry-content">
+<article id="post-290" class="post-290 post type-post status-publish format-standard hentry category-data-structure tag-generics tag-wrapper">
+	<header class="entry-header page-header">
+
+		
+		<h1 class="entry-title ">Generics</h1>
+
+		<div class="entry-meta">
+			<span class="posted-on"><i class="fa fa-calendar"/> <a href="http://www.jombelajarjava.com/generics/" rel="bookmark"><time class="entry-date published" datetime="2015-07-06T00:43:18+00:00">July 6, 2015</time><time class="updated" datetime="2015-07-20T13:40:20+00:00">July 20, 2015</time></a></span><span class="byline"> <i class="fa fa-user"/> <span class="author vcard"><a class="url fn n" href="http://www.jombelajarjava.com/author/xiado/">An</a></span></span>		</div><NIL/>
+	</header><NIL/>
+
+	<div class="entry-content">
 		<p>Cuba lihat mana-mana interface yang ada dalam Collections di Java API.</p>
-<p><a target="_blank" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://docs.oracle.com/javase/8/docs/api/java/util/List.html', 'Klik untuk buka Java API');" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">Klik untuk buka Java API</a></p>
+<p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;https://docs.oracle.com/javase/8/docs/api/java/util/List.html&#039;, &#039;Klik untuk buka Java API&#039;);" target="_blank">Klik untuk buka Java API</a></p>
 <p>Jika perasan interface tersebut meletakkan<em> ‘&lt;E&gt;’</em> selepas nama interface, contohnya,</p>
 <p><em>public interface List&lt;E&gt; extends Collection&lt;E&gt;</em></p>
 <p>Huruf besar tersebut dinamakan sebagai <em>generics</em>. <em>Generics</em> ini digunakan untuk menentukan class apa yang boleh dimasukkan ke dalam data structure tersebut. Konsep ini lebih kurang sama seperti parameter. Contoh data structure untuk menyimpan class String akan kelihatan begini:</p>
 <p><em>List&lt;String&gt; words = new ArrayList&lt;String&gt;();</em></p>
 <p>Selain E, huruf lain juga boleh digunakan seperti T, K, N.</p>
-<hr>
+<hr/>
 <h3>Primitive wrapper class</h3>
 <p>Hanya class yang boleh diletakkan pada <em>generics</em>. Data primitive seperti <em>int</em>, <em>double</em>, <em>boolean</em>, dan <em>char</em> bukan class, jadi Java menyediakan class <em>wrapper</em> untuk digunakan oleh data primitive. Antara class <em>wrapper</em> adalah:</p>
-<ul><li><em>Integer</em> untuk int</li><li><em>Long</em> untuk long</li><li><em>Double</em> untuk double</li><li><em>Character</em> untuk char</li><li><em>Boolean</em> untuk boolean</li></ul>
+<ul>
+<li><em>Integer</em> untuk int</li>
+<li><em>Long</em> untuk long</li>
+<li><em>Double</em> untuk double</li>
+<li><em>Character</em> untuk char</li>
+<li><em>Boolean</em> untuk boolean</li>
+</ul>
 <p>Jadi, kita boleh menggunakan class <em>wrapper</em> untuk diletakkan pada <em>generics</em>, contohnya:</p>
 <p><em>List&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;();</em></p>
 <p> </p>
-<div class="ssba ssba-wrap"><div style="text-align:left">Share!<br><a target="_blank" class="ssba_facebook_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/generics/', '');" href="http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/generics/"><img alt="Share on Facebook" class="ssba ssba-img" title="Facebook" src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/facebook.png"></a><a target="_blank" class="ssba_twitter_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://twitter.com/share?url=http://www.jombelajarjava.com/generics/&amp;text=Generics+', '');" href="http://twitter.com/share?url=http://www.jombelajarjava.com/generics/&amp;text=Generics+"><img alt="Tweet about this on Twitter" class="ssba ssba-img" title="Twitter" src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/twitter.png"></a><a target="_blank" class="ssba_google_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://plus.google.com/share?url=http://www.jombelajarjava.com/generics/', '');" href="https://plus.google.com/share?url=http://www.jombelajarjava.com/generics/"><img alt="Share on Google+" clas
+<NIL/><div class="ssba ssba-wrap"><div style="text-align:left">Share!<br/><a href="http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/generics/" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/generics/&#039;, &#039;&#039;);" data-site="" class="ssba_facebook_share" target="_blank"><img src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/facebook.png" title="Facebook" class="ssba ssba-img" alt="Share on Facebook"/></a><a href="http://twitter.com/share?url=http://www.jombelajarjava.com/generics/&amp;text=Generics+" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;http://twitter.com/share?url=http://www.jombelajarjava.com/generics/&amp;text=Generics+&#039;, &#039;&#039;);" data-site="" class="ssba_twitter_share" target="_blank"><img src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/twitter.png" title="Twitter" class="ssba ssba-img" alt="Tweet about this on Twitter"/></a><a href="https://plus.google.com/share?url=http://www.jombelajarjava.com/generics/" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;https://plus.google.com/share?url=http://www.jombelajarjava.com/generics/&#039;, &#039;&#039;);" data-site="" class="ssba_google_share" target="_blank"><img src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/google.png" title="Google+" class="ssba ssba-img" alt="Share on Google+"/></a></div></div><NIL/><h3>Comments</h3><p><fb:comments-count href="http://www.jombelajarjava.com/generics/"/> comments</p><div class="fb-comments" data-href="http://www.jombelajarjava.com/generics/" data-num-posts="5" data-width="100%" data-colorscheme="light"/>			</div><NIL/>
+
+	<footer class="entry-meta">
+		<i class="fa fa-folder-open-o"/> <a href="http://www.jombelajarjava.com/category/data-structure/" rel="category tag">Data Structure</a> <i class="fa fa-tags"/> <a href="http://www.jombelajarjava.com/tag/generics/" rel="tag">generics</a>, <a href="http://www.jombelajarjava.com/tag/wrapper/" rel="tag">wrapper</a>. <i class="fa fa-link"/> <a href="http://www.jombelajarjava.com/generics/" rel="bookmark">permalink</a>.
+						<hr class="section-divider"/>
+	</footer><NIL/>
+</article>
