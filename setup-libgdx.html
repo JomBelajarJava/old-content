@@ -1,33 +1,63 @@
-<div class="entry-content">
-		<p>Fokus utama framework libGDX adalah untuk <em>mobile game development</em> (Android dan iOS). Sesetengah IDE agak kurang support untuk Android development. Boleh itu boleh, cuma ada banyak configuration yang kena tukar. Agak leceh. Jadi, kita akan menggunakan IDE yang memang ada support dari pihak yang bangunkan Android itu sendiri, iaitu Google. IDE tersebut ialah <a target="_blank" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.jetbrains.com/idea/', 'IntelliJ');" href="https://www.jetbrains.com/idea/">IntelliJ</a> dan <a target="_blank" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://developer.android.com/sdk/index.html', 'Android Studio');" href="http://developer.android.com/sdk/index.html">Android Studio</a>. Pilih sahaja yang mana satu, Android Studio pun sebenarnya berasaskan daripada IntelliJ. Untuk tutorial ini, saya akan gunakan IntelliJ.</p>
-<hr>
+<article id="post-480" class="post-480 post type-post status-publish format-standard hentry category-2d-game-development tag-intellij">
+	<header class="entry-header page-header">
+
+		
+		<h1 class="entry-title ">Setup libGDX</h1>
+
+		<div class="entry-meta">
+			<span class="posted-on"><i class="fa fa-calendar"/> <a href="http://www.jombelajarjava.com/setup-libgdx/" rel="bookmark"><time class="entry-date published" datetime="2015-08-03T21:42:15+00:00">August 3, 2015</time><time class="updated" datetime="2015-08-03T21:42:46+00:00">August 3, 2015</time></a></span><span class="byline"> <i class="fa fa-user"/> <span class="author vcard"><a class="url fn n" href="http://www.jombelajarjava.com/author/xiado/">An</a></span></span>		</div><NIL/>
+	</header><NIL/>
+
+	<div class="entry-content">
+		<p>Fokus utama framework libGDX adalah untuk <em>mobile game development</em> (Android dan iOS). Sesetengah IDE agak kurang support untuk Android development. Boleh itu boleh, cuma ada banyak configuration yang kena tukar. Agak leceh. Jadi, kita akan menggunakan IDE yang memang ada support dari pihak yang bangunkan Android itu sendiri, iaitu Google. IDE tersebut ialah <a href="https://www.jetbrains.com/idea/" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;https://www.jetbrains.com/idea/&#039;, &#039;IntelliJ&#039;);" target="_blank">IntelliJ</a> dan <a href="http://developer.android.com/sdk/index.html" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;http://developer.android.com/sdk/index.html&#039;, &#039;Android Studio&#039;);" target="_blank">Android Studio</a>. Pilih sahaja yang mana satu, Android Studio pun sebenarnya berasaskan daripada IntelliJ. Untuk tutorial ini, saya akan gunakan IntelliJ.</p>
+<hr/>
 <h3>Gradle</h3>
 <p>Sebelum ini kita pernah menggunakan Ant build system untuk deploy JavaFX. Untuk libGDX pula, kita akan menggunakan Gradle build system. Dengan menggunakan Gradle, project libGDX akan download semua yang diperlukan secara automatik. Untuk setup project, download Setup App daripada website libGDX.</p>
-<p><a target="_blank" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://libgdx.badlogicgames.com/download.html', 'Klik untuk download gdx-setup');" href="https://libgdx.badlogicgames.com/download.html">Klik untuk download gdx-setup</a></p>
+<p><a href="https://libgdx.badlogicgames.com/download.html" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;https://libgdx.badlogicgames.com/download.html&#039;, &#039;Klik untuk download gdx-setup&#039;);" target="_blank">Klik untuk download gdx-setup</a></p>
 <p>Setelah selesai, double-click file tersebut untuk membuka libGDX Project Generator.</p>
-<hr>
+<hr/>
 <h3>libGDX Project Generator</h3>
 <p>libGDX Project Generator digunakan untuk menghasilkan project untuk game. Setelah selesai generate project, project tersebut boleh dibuka menggunakan mana-mana IDE.</p>
-<p><img height="512" width="441" alt="Gambar rupa libGDX Project Generator" src="https://lh3.googleusercontent.com/-tNT0Auyn-70/Vb9U5R2dtlI/AAAAAAAAAQ4/rlTm-klx-Js/s512-Ic42/libgdx-project-generator.png" class="aligncenter"></p>
+<p><img class="aligncenter" src="https://lh3.googleusercontent.com/-tNT0Auyn-70/Vb9U5R2dtlI/AAAAAAAAAQ4/rlTm-klx-Js/s512-Ic42/libgdx-project-generator.png" alt="Gambar rupa libGDX Project Generator" width="441" height="512"/></p>
 <p>Seperti yang kita nampak, kita boleh pilih untuk deploy ke beberapa platform seperti Desktop, Mobile, dan Web. Kita juga boleh pilih untuk tambah extensions untuk game tersebut.</p>
-<ul><li>Bullet – Physics engine untuk game 3D. Antara game yang menggunakan Bullet ialah GTA.</li><li>Freetype – Font kualiti tinggi.</li><li>Tools – Package tambahan yang mengandungi particle editors, texture packer, dan sebagainya.</li><li>Controllers – Support untuk controller tambahan seperti gamepad.</li><li>Box2d – Physics engine untuk game 2D. Antara game yang menggunakan Box2d ialah Angry Bird.</li><li>Box2dlights – Lighting yang menggunakan Box2d.</li><li>Ashley – Entity System Framework.</li><li>Ai – Game AI algorithm contohnya untuk <em>pathfinding</em>.</li></ul>
+<ul>
+<li>Bullet – Physics engine untuk game 3D. Antara game yang menggunakan Bullet ialah GTA.</li>
+<li>Freetype – Font kualiti tinggi.</li>
+<li>Tools – Package tambahan yang mengandungi particle editors, texture packer, dan sebagainya.</li>
+<li>Controllers – Support untuk controller tambahan seperti gamepad.</li>
+<li>Box2d – Physics engine untuk game 2D. Antara game yang menggunakan Box2d ialah Angry Bird.</li>
+<li>Box2dlights – Lighting yang menggunakan Box2d.</li>
+<li>Ashley – Entity System Framework.</li>
+<li>Ai – Game AI algorithm contohnya untuk <em>pathfinding</em>.</li>
+</ul>
 <p>Pilih extensions bergantung kepada jenis game yang kita nak buat, kemudian klik ‘Generate’. Kalau ada pilih Android, dia akan tanya sama ada mahu guna Android API yang latest. Pilih ‘No’ untuk kedua-duanya. Proses untuk generate project akan mengambil masa kerana sedang download.</p>
-<hr>
+<hr/>
 <h3>Open project</h3>
 <p>Selepas siap generate project, buka project tersebut menggunakan IntelliJ. Jika ini projek yang pertama menggunakan IntelliJ, proses ini akan sekali lagi mengambil masa yang lama kerana IntelliJ sedang menghasilkan project menggunakan Gradle dan download beberapa <em>dependencies</em>.</p>
 <p>Setelah selesai, kita boleh nampak package untuk project. Bergantung kepada platform mana yang kita pilih, akan ada beberapa project yang telah dihasilkan:</p>
-<ul><li>Core – Tempat utama untuk letak semua code untuk game.</li><li>Desktop – Code untuk run game atas desktop.</li><li>Android/iOS – Code untuk run game atas mobile.</li><li>HTML – Code untuk run atas web.</li></ul>
+<ul>
+<li>Core – Tempat utama untuk letak semua code untuk game.</li>
+<li>Desktop – Code untuk run game atas desktop.</li>
+<li>Android/iOS – Code untuk run game atas mobile.</li>
+<li>HTML – Code untuk run atas web.</li>
+</ul>
 <p>Secara ringkasnya, semua code berkaitan game seperti game logic, input, sound dan sebagainya akan diletakkan di Core. Untuk run game tersebut, run menggunakan project untuk platform masing-masing.</p>
 <p>Kelebihan cara ini adalah untuk memudahkan developer untuk test game kerana untuk run Android di desktop perlu menggunakan emulator. Emulator yang disediakan Google pula sangat perlahan. Cara lain ialah test menggunakan phone sendiri, tetapi mungkin developer tidak mempunyai phone Android atau iOS. Oleh itu, kita run terus di atas desktop, dan apabila sudah siap barulah kita boleh test di atas mobile phone.</p>
-<hr>
+<hr/>
 <h3>Test run</h3>
 <p>Kita akan test run project atas desktop untuk lihat sama ada configuration untuk game kita betul ataupun tidak. Sebelum itu, kita perlu buat sesuatu terlebih dahulu.</p>
 <p>Pergi ke menu ‘Run’, kemudian ‘Edit Configurations…’. Selepas itu, klik ‘+’ dan pilih ‘Application’. Tulis’Desktop’ di Name. Pilih ‘desktop’ untuk ‘Use classpath of module’. Pilih ‘DesktopLauncher’ untuk ‘Main class’. Pilih ‘android/assets’ untuk ‘Working directory’ (kalau bukan project Android, pilih ‘core/assets’).</p>
 <p>Klik Apply dan OK.</p>
-<p><img height="499" width="800" alt="Gambar configuration untuk run libGDX atas desktop" src="https://lh3.googleusercontent.com/--u2XZ4Qs3Ns/Vb9sQEPNPPI/AAAAAAAAARQ/rBtr2jmlwA8/s800-Ic42/config.png" class="aligncenter"></p>
+<p><img class="aligncenter" src="https://lh3.googleusercontent.com/--u2XZ4Qs3Ns/Vb9sQEPNPPI/AAAAAAAAARQ/rBtr2jmlwA8/s800-Ic42/config.png" alt="Gambar configuration untuk run libGDX atas desktop" width="800" height="499"/></p>
 <p>Setelah selesai, kita boleh run game libGDX di atas desktop menggunakan menu Run ‘Desktop’ atau klik butang dengan icon play hijau.</p>
 <p>Kalau ada keluar windows dengan gambar seperti di bawah ini dengan background merah maksudnya kita sudah berjaya setup game menggunakan libGDX.</p>
-<p><img height="252" width="255" alt="Gambar logo badlogicgames" src="https://lh3.googleusercontent.com/-_rFCpVrOz68/Vb9tdYs5ShI/AAAAAAAAARk/_cYEG_BUpHM/s255-Ic42/logo-badlogicgames.png" class="aligncenter"></p>
+<p><img class="aligncenter" src="https://lh3.googleusercontent.com/-_rFCpVrOz68/Vb9tdYs5ShI/AAAAAAAAARk/_cYEG_BUpHM/s255-Ic42/logo-badlogicgames.png" alt="Gambar logo badlogicgames" width="255" height="252"/></p>
 <p> </p>
 <p> </p>
-<div class="ssba ssba-wrap"><div style="text-align:left">Share!<br><a target="_blank" class="ssba_facebook_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/setup-libgdx/', '');" href="http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/setup-libgdx/"><img alt="Share on Facebook" class="ssba ssba-img" title="Facebook" src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/facebook.png"></a><a target="_blank" class="ssba_twitter_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://twitter.com/share?url=http://www.jombelajarjava.com/setup-libgdx/&amp;text=Setup+libGDX+', '');" href="http://twitter.com/share?url=http://www.jombelajarjava.com/setup-libgdx/&amp;text=Setup+libGDX+"><img alt="Tweet about this on Twitter" class="ssba ssba-img" title="Twitter" src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/twitter.png"></a><a target="_blank" class="ssba_google_share" data-site="" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://plus.google.com/share?url=http://www.jombelajarjava.com/setup-libgdx/', '');" href="https://plus.google.com/share?url=http://www.jombelajarjava.com/setup-libgdx/"><img alt="Share on Google+" class="ssba ssba-img" title="Google+" src="http://www.jombelajarja
+<NIL/><div class="ssba ssba-wrap"><div style="text-align:left">Share!<br/><a href="http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/setup-libgdx/" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;http://www.facebook.com/sharer.php?u=http://www.jombelajarjava.com/setup-libgdx/&#039;, &#039;&#039;);" data-site="" class="ssba_facebook_share" target="_blank"><img src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/facebook.png" title="Facebook" class="ssba ssba-img" alt="Share on Facebook"/></a><a href="http://twitter.com/share?url=http://www.jombelajarjava.com/setup-libgdx/&amp;text=Setup+libGDX+" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;http://twitter.com/share?url=http://www.jombelajarjava.com/setup-libgdx/&amp;text=Setup+libGDX+&#039;, &#039;&#039;);" data-site="" class="ssba_twitter_share" target="_blank"><img src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/twitter.png" title="Twitter" class="ssba ssba-img" alt="Tweet about this on Twitter"/></a><a href="https://plus.google.com/share?url=http://www.jombelajarjava.com/setup-libgdx/" onclick="__gaTracker(&#039;send&#039;, &#039;event&#039;, &#039;outbound-article&#039;, &#039;https://plus.google.com/share?url=http://www.jombelajarjava.com/setup-libgdx/&#039;, &#039;&#039;);" data-site="" class="ssba_google_share" target="_blank"><img src="http://www.jombelajarjava.com/wp-content/plugins/simple-share-buttons-adder/buttons/simple/google.png" title="Google+" class="ssba ssba-img" alt="Share on Google+"/></a></div></div><NIL/><h3>Comments</h3><p><fb:comments-count href="http://www.jombelajarjava.com/setup-libgdx/"/> comments</p><div class="fb-comments" data-href="http://www.jombelajarjava.com/setup-libgdx/" data-num-posts="5" data-width="100%" data-colorscheme="light"/>			</div><NIL/>
+
+	<footer class="entry-meta">
+		<i class="fa fa-folder-open-o"/> <a href="http://www.jombelajarjava.com/category/2d-game-development/" rel="category tag">2D Game Development</a> <i class="fa fa-tags"/> <a href="http://www.jombelajarjava.com/tag/intellij/" rel="tag">intellij</a>. <i class="fa fa-link"/> <a href="http://www.jombelajarjava.com/setup-libgdx/" rel="bookmark">permalink</a>.
+						<hr class="section-divider"/>
+	</footer><NIL/>
+</article>
